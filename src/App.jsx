@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 
 import Expenses from './components/Expenses/Expenses';
+import NewExpense from './components/NewExpense/NewExpense';
 
 const DUMMY_EXPENSES = [
   {
@@ -27,6 +28,7 @@ const DUMMY_EXPENSES = [
 const App = props => {
   return (
     <div>
+      <NewExpense />
       <Expenses items={DUMMY_EXPENSES} />
     </div>
   )
