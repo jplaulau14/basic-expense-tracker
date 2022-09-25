@@ -6,14 +6,18 @@ import "./Expenses.css";
 
 const Expenses = (props) => {
   const [filteredYear, setFilteredYear] = useState("2022");
-  const filterChangeHandler = selectedYear => {
+  const filterChangeHandler = (selectedYear) => {
     setFilteredYear(selectedYear);
-  }
+  };
   return (
     <div className="expenses">
-      <ExpensesFilter selected={filteredYear} onFilteredYear={filterChangeHandler}/>
-      {props.items.map((expense) => (
+      <ExpensesFilter
+        selected={filteredYear}
+        onFilteredYear={filterChangeHandler}
+      />
+      {props.items.map((expense, index) => (
         <ExpenseItem
+          key={expense.id}
           date={expense.date}
           title={expense.title}
           amount={expense.amount}
