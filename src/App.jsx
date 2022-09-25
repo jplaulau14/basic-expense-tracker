@@ -1,7 +1,7 @@
-import React, { useState } from 'react';
+import React, { useState } from "react";
 
-import Expenses from './components/Expenses/Expenses';
-import NewExpense from './components/NewExpense/NewExpense';
+import Expenses from "./components/Expenses/Expenses";
+import NewExpense from "./components/NewExpense/NewExpense";
 
 const DUMMY_EXPENSES = [
   {
@@ -25,18 +25,18 @@ const DUMMY_EXPENSES = [
   },
 ];
 
-const App = props => {
-
-  const addExpenseHandler = expense => {
-    console.log('In App.jsx');
-    console.log(expense)
+const App = (props) => {
+  const addExpenseHandler = (expense) => {
+    console.log(expense);
+    console.log("LEZGOOOOO");
   };
+
   return (
     <div>
-      <NewExpense onAddExpense={addExpenseHandler}/>
+      <NewExpense onAddExpense={addExpenseHandler} />
       <Expenses items={DUMMY_EXPENSES} />
     </div>
-  )
+  );
 };
 
 export default App;
